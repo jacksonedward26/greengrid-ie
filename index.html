@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenGrid — Sustainable Electricity Consulting</title>
+<meta name="description" content="GreenGrid helps Irish businesses and homeowners move to renewable electricity — energy audits, solar and battery planning, grid connection and SEAI grant support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#top">
+    <svg class="logo-mark" viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">
+      <circle cx="8" cy="10" r="3" fill="var(--circuit-green)"/>
+      <circle cx="32" cy="10" r="3" fill="var(--circuit-green)"/>
+      <circle cx="20" cy="30" r="3" fill="var(--copper)"/>
+      <path d="M8 10 L20 20 L32 10 M20 20 L20 30" stroke="var(--line-blue)" stroke-width="1.6" fill="none"/>
+    </svg>
+    <span>GreenGrid</span>
+  </a>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Electricity Consulting · Ireland</p>
+      <h1>Turn your energy transition into a straight line.</h1>
+      <p class="lede">GreenGrid helps businesses and homeowners move to renewable electricity — without the guesswork of grants, grid connections, or sizing a system that's wrong for your load.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a consultation</a>
+        <a href="#process" class="btn btn-ghost">See how we work</a>
+      </div>
+    </div>
+
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 400 300" width="100%" height="100%">
+        <!-- blueprint grid -->
+        <g class="grid-lines">
+          <path d="M0 50 H400 M0 100 H400 M0 150 H400 M0 200 H400 M0 250 H400" />
+          <path d="M50 0 V300 M100 0 V300 M150 0 V300 M200 0 V300 M250 0 V300 M300 0 V300 M350 0 V300" />
+        </g>
+
+        <!-- source nodes: sun + wind -->
+        <g class="node source">
+          <circle cx="60" cy="70" r="22"/>
+          <path class="sun-rays" d="M60 40 V30 M84 46 L91 39 M36 46 L29 39 M32 70 H20 M100 70 H88" />
+        </g>
+        <g class="node source">
+          <circle cx="60" cy="220" r="22"/>
+          <path d="M60 190 V250 M52 200 Q60 190 68 200 M52 240 Q60 230 68 240" fill="none"/>
+        </g>
+
+        <!-- transformer / grid node -->
+        <circle class="node grid-node" cx="210" cy="145" r="28"/>
+        <text x="210" y="150" class="node-label">GRID</text>
+
+        <!-- load node: building -->
+        <g class="node load">
+          <rect x="320" y="115" width="60" height="60" rx="3"/>
+          <path d="M335 175 V145 H350 V175 M360 175 V150 H370 V175" fill="none"/>
+        </g>
+
+        <!-- connecting lines with animated current -->
+        <path class="wire" d="M82 70 L188 130" />
+        <path class="wire" d="M82 220 L188 160" />
+        <path class="wire" d="M238 145 L320 145" />
+
+        <circle class="pulse" r="3"><animateMotion dur="3s" repeatCount="indefinite" path="M82 70 L188 130"/></circle>
+        <circle class="pulse pulse-copper" r="3"><animateMotion dur="3.4s" repeatCount="indefinite" path="M82 220 L188 160"/></circle>
+        <circle class="pulse" r="3"><animateMotion dur="2.2s" repeatCount="indefinite" path="M238 145 L320 145"/></circle>
+      </svg>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <p class="eyebrow center">What we do</p>
+    <h2 class="section-title center">Three problems we solve, in order</h2>
+
+    <div class="card-grid">
+      <article class="card">
+        <p class="card-index">Audit</p>
+        <h3>Energy Audits</h3>
+        <p>We measure what you actually use, half-hourly if needed, not what the meter estimates — so every recommendation after this is based on real load data, not averages.</p>
+      </article>
+      <article class="card">
+        <p class="card-index">Design</p>
+        <h3>Renewable Transition Planning</h3>
+        <p>Solar, battery storage, and demand-side strategies sized to your measured load — not a generic package sized to sell equipment.</p>
+      </article>
+      <article class="card">
+        <p class="card-index">Connect</p>
+        <h3>Grid Connection &amp; Compliance</h3>
+        <p>We handle the paperwork for ESB Networks connection applications and SEAI grant submissions, so approvals don't stall a project that's otherwise ready to go.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="process" class="process">
+    <p class="eyebrow center">How it runs</p>
+    <h2 class="section-title center">A four-step sequence, start to finish</h2>
+
+    <ol class="process-list">
+      <li>
+        <span class="step-num">01</span>
+        <div>
+          <h3>Audit</h3>
+          <p>We measure your current usage and build a load profile — the baseline everything else is designed against.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">02</span>
+        <div>
+          <h3>Design</h3>
+          <p>We model renewable generation and storage options against that load profile, and compare the realistic options side by side.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">03</span>
+        <div>
+          <h3>Connect</h3>
+          <p>We manage the grid connection application and any grant paperwork, so the project doesn't stall on administration.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">04</span>
+        <div>
+          <h3>Monitor</h3>
+          <p>Once commissioned, we track performance against the original model and flag anything worth adjusting.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-copy">
+      <p class="eyebrow">About GreenGrid</p>
+      <h2>Independent advice, not a sales pipeline for equipment.</h2>
+      <p>GreenGrid isn't tied to any single solar installer, battery brand, or grant scheme. We work from your actual electricity data, model the options honestly — including the option that the right answer is to do less than a vendor would recommend — and stay involved through the connection and commissioning process.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Ready to see what a straight line looks like for your site?</h2>
+      <p class="lede">Send a note with a rough sense of your site (home, small business, or commercial premises) and we'll follow up to arrange an audit.</p>
+      <a class="btn btn-primary" href="mailto:hello@greengrid.ie">Email hello@greengrid.ie</a>
+      <p class="contact-note">Replace this address and add a phone number once you have them — see the note left for you in the code.</p>
+      <!-- TODO: swap in your real contact email/phone before publishing -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> GreenGrid. Ireland.</span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
